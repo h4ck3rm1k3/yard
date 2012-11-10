@@ -1,14 +1,18 @@
 source :rubygems
 
 group :development do
-  gem 'rspec'
+  gem 'rspec-core'
+  gem 'rspec-mocks'
+  gem 'rspec-expectations'
   gem 'rake'
   gem 'rvm-tester'
   gem 'simplecov'
 end
 
+
+
 group :markdown do
-  gem 'redcarpet', '= 1.17.2', :platforms => :mri
+  gem 'redcarpet'
   gem 'kramdown', :platforms => :jruby
 end
 

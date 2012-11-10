@@ -1,9 +1,5 @@
 require "rubygems"
-begin
-  require "rspec"
-rescue LoadError
-  require "spec"
-end
+require "rspec/core"
 
 begin
   require 'bundler'
