@@ -6,9 +6,14 @@ YARD::VERSION.replace(ENV['YARD_VERSION']) if ENV['YARD_VERSION']
 
 task :default => :specs
 
+Bundler::GemHelper.install_tasks
+require "rubygems"
+
+
 desc "Builds the gem"
 task :gem do
-  Gem::Builder.new(eval(File.read('yard.gemspec'))).build
+      spec = Gem::Specification::load('yard.gemspec')
+      Gem::Builder.new(spec).build
 end
 
 desc "Installs the gem"
